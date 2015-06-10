@@ -19,3 +19,17 @@ body {
   background-color: $base-background-color;
   color: $base-font-color;
 }
+
+.header {
+  height: 50px;
+  background-color: #496D99;
+}
+
+.container {
+  @include outer-container(980px);
+  height: 200px;
+  background-color: #E0E1E2;
+  border-right: 2px solid $medium-gray;
+  border-bottom: 2px solid $medium-gray;
+  border-left: 2px solid $medium-gray;
+}
