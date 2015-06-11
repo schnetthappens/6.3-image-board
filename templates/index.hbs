@@ -1,0 +1,16 @@
+<div class="header">
+  <div class="header-container">
+    <a href="#/post"><i class="plus fa fa-plus-circle fa-2x"></i></a>
+  </div>
+</div>
+
+<div class="container">
+  {{#each this}}
+  <li class="each-image">
+    <div class="image-contents">
+      <img class ="image" src="{{url}}" alt="" />
+      <h5 class="image-caption">{{caption}}</h5>
+    </div>
+  </li>
+  {{/each}}
+</div>
