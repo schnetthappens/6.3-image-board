@@ -25,6 +25,15 @@ body {
   background-color: #496D99;
 }
 
+  .header-container {
+    @include outer-container(980px);
+  }
+
+    .fa {
+      color: #082238;
+      margin-top: 0.2em;
+    }
+
 .container {
   @include outer-container(980px);
   height: 200px;
