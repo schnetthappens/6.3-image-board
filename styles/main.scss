@@ -26,19 +26,36 @@ body {
 }
 
   .header-container {
-    @include outer-container(980px);
+    @include outer-container(1080px);
   }
 
     .fa {
       color: #082238;
-      margin-top: 0.2em;
+      margin-top: 0.25em;
     }
 
 .container {
-  @include outer-container(980px);
-  height: 200px;
+  @include outer-container(840px);
+  height: auto;
   background-color: #E0E1E2;
   border-right: 2px solid $medium-gray;
   border-bottom: 2px solid $medium-gray;
   border-left: 2px solid $medium-gray;
 }
+
+  .each-image {
+    list-style: none;
+  }
+
+    .image-contents {
+      width: 70%;
+      height: 450px;
+      margin: 0 auto;
+      background-color: #fff;
+      margin-bottom: 2em;
+    }
+
+    .image {
+      width:100%;
+      height: 400px;
+    }

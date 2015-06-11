@@ -1,4 +1,5 @@
 import {ImageCollection} from '/models/image';
+import IndexView from '/views/index';
 
 var Router = Backbone.Router.extend({
   routes: {
@@ -8,18 +9,14 @@ var Router = Backbone.Router.extend({
 
   initialize: function() {
     this.images = new ImageCollection();
-    this.images.fetch();
-    console.log(this.images);
   },
 
-  // index: function() {
-  //   // console.log(images);
-  // },
-  //
-  // post: function() {
-  //   console.log('this is the create screen');
-  // }
-
+  index: function() {
+    var view = new IndexView({collection: this.images});
+    $('.content-container').html(view.el);
+    this.images.fetch();
+    // console.log(this.images);
+  }
 });
 
 var router = new Router();
