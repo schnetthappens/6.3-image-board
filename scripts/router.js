@@ -1,17 +1,24 @@
+import {ImageCollection} from '/models/image';
 
 var Router = Backbone.Router.extend({
   routes: {
   '': 'index',
-  'create': 'create',
+  'post': 'post',
   },
 
-  index: function() {
-    console.log('this is the index');
+  initialize: function() {
+    this.images = new ImageCollection();
+    this.images.fetch();
+    console.log(this.images);
   },
 
-  create: function() {
-    console.log('this is the create screen');
-  }
+  // index: function() {
+  //   // console.log(images);
+  // },
+  //
+  // post: function() {
+  //   console.log('this is the create screen');
+  // }
 
 });
 
